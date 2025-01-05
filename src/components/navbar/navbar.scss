@@ -8,41 +8,42 @@ body {
 .navbar {
     background: $dark;
     border-bottom: $border;
-    height: 48px;
+    min-height: 48px;
     &-brand {
         color: $wht !important;
         display: flex;
-        gap: 14px;
         align-items: center;
+        gap: 14px;
         font-size: 22px;
         font-weight: 500;
-        line-height: 28px;
+        height: 47px;
         span {
             color: $success;
         }
     }
 
     &-toggler {
-        &-icon {}
+        span {
+            color: white;
+        }
     }
 
     &-nav {
         column-gap: 24px;
         li {
             a {
-                line-height: 24px;
                 color: $wht !important;
-                padding: 12px 0 !important;
+                padding: 10px 0 !important;
                 border-bottom: 3px solid transparent;
                 transition: all .4s ease;
-                transform: translateY(1px);
+                transform: translateY(2px);
                 &.active,
                 &:hover {
                     color: $wht !important;
-                    border-bottom: 2px solid $success;
+                    border-bottom: 3px solid $success;
                 }
                 i{
-                    font-size: 22px;
+                    font-size: 20px;
                 }
             }
         }

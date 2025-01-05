@@ -6,7 +6,7 @@ export const Navbar = () => {
     useEffect(() => {
         const links = document.querySelectorAll(".nav-link");
         links.forEach(a => {
-            a.addEventListener('click', function() {
+            a.addEventListener('click', function () {
                 links.forEach(innerA => innerA.classList.remove("active"));
                 a.classList.add('active');
             })
@@ -17,11 +17,11 @@ export const Navbar = () => {
             <Link to="/" className="navbar-brand text-uppercase">
                 <i className="fa-solid fa-bars"></i>
                 <div>
-                Hikmat<span>.uz</span>
+                    Hikmat<span>.uz</span>
                 </div>
             </Link>
-            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon"></span>
+            <button className="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span className="fa-solid fa-bars"></span>
             </button>
             <div className="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                 <ul className="navbar-nav mb-2 mb-lg-0">

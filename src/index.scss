@@ -29,7 +29,7 @@ li {
 .main {
     display: flex;
     aside {
-        height: calc(100vh - 48px);
+        min-height: calc(100vh - 48px);
         max-width: 288px;
         width: 100%;
         background-color: $dark;
