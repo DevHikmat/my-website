@@ -28,7 +28,6 @@ li {
 
 .main {
     display: flex;
-
     aside {
         height: calc(100vh - 48px);
         max-width: 288px;
@@ -111,5 +110,18 @@ li {
     article {
         width: calc(100% - 288px);
         background: url("./static/body\ bg.png") no-repeat center center / cover;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .main{
+        flex-direction: column;
+        aside {
+            // display: none;
+        }
+        aside, article{
+            max-width: 100%;
+            width: 100%;
+        }
     }
 }
