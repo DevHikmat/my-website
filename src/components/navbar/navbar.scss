@@ -1,0 +1,50 @@
+@import "../../var";
+
+body {
+    height: 100vh;
+    background-color: black !important;
+}
+
+.navbar {
+    background: $dark;
+    border-bottom: $border;
+    height: 48px;
+    &-brand {
+        color: $wht !important;
+        display: flex;
+        gap: 14px;
+        align-items: center;
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 28px;
+        span {
+            color: $success;
+        }
+    }
+
+    &-toggler {
+        &-icon {}
+    }
+
+    &-nav {
+        column-gap: 24px;
+        li {
+            a {
+                line-height: 24px;
+                color: $wht !important;
+                padding: 12px 0 !important;
+                border-bottom: 3px solid transparent;
+                transition: all .4s ease;
+                transform: translateY(1px);
+                &.active,
+                &:hover {
+                    color: $wht !important;
+                    border-bottom: 2px solid $success;
+                }
+                i{
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+}

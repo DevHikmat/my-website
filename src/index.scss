@@ -1,0 +1,115 @@
+@import "./var";
+
+* {
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+}
+
+p{
+    color: $text-color;
+}
+
+ul,
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0 !important;
+}
+
+.success-btn {
+    background-color: $success;
+    color: $wht;
+    padding: 8px 44px;
+    font-size: 18px;
+    line-height: 27px;
+    border-radius: 8px;
+    border: none;
+}
+
+.main {
+    display: flex;
+
+    aside {
+        height: calc(100vh - 48px);
+        max-width: 288px;
+        width: 100%;
+        background-color: $dark;
+        border-right: $border;
+
+        .page-controls {
+            border-bottom: $border;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 8px 14px;
+            i {
+                font-size: 20px;
+                color: $wht;
+            }
+        }
+
+        .profile {
+            padding: 14px;
+            color: $wht;
+            border-bottom: $border;
+            img {
+                border-radius: 8px;
+                height: 260px;
+                width: 100%;
+                object-fit: cover;
+                margin-bottom: 8px;
+            }
+            h3 {
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 24px;
+            }
+            .skill {
+                display: flex;
+                gap: 10px;
+                align-items: center;
+                flex-wrap: wrap;
+                &-item {
+                    padding: 6px 10px;
+                    border-radius: 8px;
+                    background-color: $darker;
+                    font-size: 12px;
+                }
+            }
+        }
+
+        .contact-list {
+            padding: 14px !important;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            li {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                div {
+                    h4 {
+                        color: $wht;
+                        font-size: 15px;
+                        font-weight: 500;
+                        line-height: 24px;
+                        margin-bottom: 0;
+
+                    }
+                    p, a {
+                        display: block;
+                        color: $text-color;
+                        font-size: 13px;
+                        line-height: 21px;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    article {
+        width: calc(100% - 288px);
+        background: url("./static/body\ bg.png") no-repeat center center / cover;
+    }
+}
