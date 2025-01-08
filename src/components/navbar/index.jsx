@@ -12,12 +12,12 @@ export const Navbar = () => {
             })
         })
     }, [])
-    return <nav className="navbar navbar-expand-lg p-0">
+    return <nav className="navbar sticky-top navbar-expand-lg p-0">
         <div className="container-fluid">
             <Link to="/" className="navbar-brand text-uppercase">
                 <i className="fa-solid fa-bars"></i>
                 <div>
-                    Hikmat<span>.uz</span>
+                    Hikmatdev<span>.uz</span>
                 </div>
             </Link>
             <button className="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

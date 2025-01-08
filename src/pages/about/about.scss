@@ -1,0 +1,99 @@
+@import "../../var";
+
+.about {
+    padding: 53px 20px 32px 20px;
+
+    &-text {
+        padding-bottom: 64px;
+
+        p {
+            font-size: 18px;
+            line-height: 27px;
+        }
+
+        button {
+            margin-top: 24px;
+        }
+    }
+
+    &-tech {
+        padding-bottom: 64px;
+
+        .tech-box {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+
+            &-item {
+                width: calc((100% - 60px) / 4);
+                background-color: $dark;
+                border-radius: 12px;
+                border: $border;
+                padding: 20px;
+
+                img {
+                    display: block;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+
+    &-what {
+        padding-bottom: 64px;
+        &-box {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+
+            &-item {
+                width: calc((100% - 20px) / 2);
+                background-color: $dark;
+                border-radius: 12px;
+                padding: 20px;
+                display: flex;
+                align-items: flex-start;
+                gap: 14px;
+                border: $border;
+
+                img {
+                    display: block;
+                }
+
+                div {
+                    h3 {
+                        color: $wht;
+                        font-size: 20px;
+                        font-weight: 600;
+                        line-height: 30px;
+                        margin-bottom: 6px;
+                    }
+
+                    p {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    &-clients{
+        .clients-box{
+            display: flex;
+            gap: 20px;
+            &-item{
+                width: calc((100% - 60px) / 4);
+                background-color: $dark;
+                padding: 20px;
+                border: $border;
+                border-radius: 12px;
+                img{
+                    height: 100px;
+                    display: block;
+                    margin: 0 auto;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+}

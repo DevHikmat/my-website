@@ -5,7 +5,7 @@
     font-family: "Poppins", serif;
 }
 
-p{
+p {
     color: $text-color;
 }
 
@@ -14,6 +14,26 @@ li {
     list-style: none;
     margin: 0;
     padding: 0 !important;
+}
+
+.title {
+    position: relative;
+    margin-bottom: 24px;
+    h2 {
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 48px;
+        color: $wht;
+        &::after{
+            content: '';
+            width: 112px;
+            height: 8px;
+            border-radius: 10px;
+            background-color: $success;
+            display: block;
+            margin-top: 8px;
+        }
+    }
 }
 
 .success-btn {
@@ -26,12 +46,26 @@ li {
     border: none;
 }
 
+.outline-btn{
+    padding: 10px 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 6px;
+    border: $border;
+    background-color: $dark;
+    color: $wht;
+}
+
 .main {
     display: flex;
+
     aside {
-        min-height: calc(100vh - 48px);
+        height: calc(100vh - 48px);
         max-width: 288px;
         width: 100%;
+        position: sticky;
+        top: 48px;
         background-color: $dark;
         border-right: $border;
 
@@ -41,6 +75,7 @@ li {
             align-items: center;
             gap: 14px;
             padding: 8px 14px;
+
             i {
                 font-size: 20px;
                 color: $wht;
@@ -51,6 +86,7 @@ li {
             padding: 14px;
             color: $wht;
             border-bottom: $border;
+
             img {
                 border-radius: 8px;
                 height: 260px;
@@ -58,16 +94,19 @@ li {
                 object-fit: cover;
                 margin-bottom: 8px;
             }
+
             h3 {
                 font-size: 18px;
                 font-weight: 500;
                 line-height: 24px;
             }
+
             .skill {
                 display: flex;
                 gap: 10px;
                 align-items: center;
                 flex-wrap: wrap;
+
                 &-item {
                     padding: 6px 10px;
                     border-radius: 8px;
@@ -82,10 +121,12 @@ li {
             display: flex;
             flex-direction: column;
             gap: 14px;
+
             li {
                 display: flex;
                 align-items: center;
                 gap: 10px;
+
                 div {
                     h4 {
                         color: $wht;
@@ -95,7 +136,9 @@ li {
                         margin-bottom: 0;
 
                     }
-                    p, a {
+
+                    p,
+                    a {
                         display: block;
                         color: $text-color;
                         font-size: 13px;
@@ -114,12 +157,15 @@ li {
 }
 
 @media only screen and (max-width: 576px) {
-    .main{
+    .main {
         flex-direction: column;
+
         aside {
             // display: none;
         }
-        aside, article{
+
+        aside,
+        article {
             max-width: 100%;
             width: 100%;
         }

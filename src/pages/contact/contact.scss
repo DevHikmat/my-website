@@ -1,0 +1,106 @@
+@import "../../var";
+
+.contact {
+    padding: 32px 20px;
+
+    .main {
+        display: flex;
+        gap: 20px;
+        padding-bottom: 64px;
+
+        .item {
+            background-color: $dark;
+            padding: 28px 0;
+            border-radius: 12px;
+            border: $border;
+            width: calc((100% - 40px) / 3);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            &:first-child {
+                .icon-bg {
+                    background: radial-gradient(100% 100% at 0% 0%, rgba(66, 133, 244, 0.25) 0%, rgba(234, 67, 53, 0.25) 35.96%, rgba(251, 188, 5, 0.25) 68.49%, rgba(52, 168, 83, 0.25) 100%);
+                }
+            }
+            &:nth-child(2) {
+                .icon-bg{
+                    background: rgba(27, 146, 209, 0.25);
+                }
+            }
+            &:nth-child(3) {
+                .icon-bg{
+                    background: rgba(0, 200, 83, 0.25);
+                }
+            }
+
+            .icon-bg {
+                border-radius: 6px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 64px;
+                height: 64px;
+                margin-bottom: 8px;
+
+                img {
+                    object-fit: cover;
+                }
+            }
+
+            h4 {
+                color: $wht;
+                font-size: 20px;
+                font-weight: 600;
+                line-height: 30px;
+            }
+
+            a, span {
+                text-decoration: none;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 24px;
+                color: rgba($color: #fff, $alpha: 0.7);
+                &:hover{
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .my-form {
+        form {
+            border: $border;
+            border-radius: 12px;
+            padding: 20px;
+            background-color: $dark;
+
+            label {
+                color: $wht;
+                display: block;
+                margin-bottom: 8px;
+            }
+
+            input,
+            textarea {
+                border: $border;
+                background-color: $dark;
+                color: rgba($color: #fff, $alpha: 0.5);
+                &::placeholder {
+                    color: rgba($color: #fff, $alpha: 0.5);
+                    font-weight: 400;
+                }
+                &:focus{
+                    border: 1px solid rgba(57, 150, 95, 1);
+                    box-shadow: none;
+                }
+            }
+
+            button {
+                margin-top: 20px;
+            }
+        }
+    }
+}

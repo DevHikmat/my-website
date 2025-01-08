@@ -1,14 +1,19 @@
 import { Navbar } from "./components/navbar";
 import photo from "./static/IMG_1075.JPG";
-import email from "./static/Frame 11.png";
-import github from "./static/Frame 11 (1).png";
-import telegram from "./static/Frame 11 (2).png";
-import telefon from "./static/Frame 11 (3).png";
+import email from "./static/email.png";
+import github from "./static/github.png";
+import telegram from "./static/telegram.png";
+import telefon from "./static/tel.png";
 import { Link, Route, Routes } from "react-router-dom";
 import Home from "./pages/home";
 import About from "./pages/about";
+import Projects from "./pages/projects";
+import Contact from "./pages/contact";
 
 export const Layout = ({ children }) => {
+    const copyToClipboard = () => {
+        navigator.clipboard.writeText("+998772578008");
+    }
     return <div className="layout">
         <Navbar />
         <div className="main">
@@ -34,7 +39,7 @@ export const Layout = ({ children }) => {
                         <img src={email} alt="email" />
                         <div>
                             <h4>E-pochta</h4>
-                            <p>hikmatmullajonov@gmail.com</p>
+                            <Link target="_blank" to={"mailto:hikmatmullajonov@gmail.com"}>hikmatmullajonov@gmail.com</Link>
                         </div>
                     </li>
                     <li>
@@ -55,7 +60,7 @@ export const Layout = ({ children }) => {
                         <img src={telefon} alt="tel" />
                         <div>
                             <h4>Telefon raqam</h4>
-                            <p>+998 (77) 257-80-08</p>
+                            <p style={{cursor: "pointer"}} onClick={copyToClipboard}>+998 (77) 257-80-08</p>
                         </div>
                     </li>
                 </ul>
@@ -64,6 +69,8 @@ export const Layout = ({ children }) => {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/about" element={<About />} />
+                    <Route path="/projects" element={<Projects />} />
+                    <Route path="/contact" element={<Contact />} />
                 </Routes>
             </article>
         </div>
